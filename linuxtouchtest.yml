@@ -1,5 +1,8 @@
 ---
-- name: Touch the same file, but add/remove some permissions
-  ansible.builtin.file:
-    path: /home/pi/Documents/ansible_touch_test.conf
-    state: touch
+- name: File mod test Linux
+  hosts: all
+  tasks:
+  - name: Touch the same file, but add/remove some permissions
+    ansible.builtin.file:
+      path: /home/pi/Documents/ansible_touch_test.conf
+      state: touch
